@@ -1,0 +1,44 @@
+baseURL: https://distock.github.io/
+locale: en-us
+title: DStock
+
+theme: ["PaperMod"]
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        # - name: Search
+        #   url: search/
+        #   weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        # - name: WiKi
+        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+
+params:
+  defaultTheme: auto
+  homeInfoParams:
+    Title: Hi there 👋
+    Content: >
+      - My name is Didier, welcome to my blog.
+
+      - This isn't a place for long-form articles; instead, it's a personal log of short notes and things I’ve learned throughout my dev journey.
+
+  socialIcons:
+    - name: github
+      title: View my Github
+      url: "https://github.com/distock"
+    - name: LinkedIn
+      title: View my LinkedIn
+      url: "https://github.com/distock"
