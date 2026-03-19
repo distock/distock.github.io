@@ -5,8 +5,6 @@ title: "What the hell is MCP?"
 tags: ["LLM", "MCP", "AI", "AI Agent"]
 ---
 
-# What the hell is MCP?
-
 **MCP** stands for **Model Context Protocol**. It was designed by [Antrophic](https://www.anthropic.com) to allow LLMs to connect to external data sources. Before MCP, there was no standardized way for LLMs to do this, which made implementations difficult since many services are built in different languages and vary in how their APIs are structured.
 
 Since the introduction of MCP, connecting specific external sources to an LLM is much easier. All you have to do is set up your own MCP server. I will try this later and link the outcome in this post. 
