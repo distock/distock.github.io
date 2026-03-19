@@ -1,4 +1,4 @@
-name: Deploy Hugo PaperMod Demo to Pages
+name: Deploy Hugo site to Pages
 
 on:
   push:
@@ -16,6 +16,11 @@ on:
         required: false
         default: "0.146.0"
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
@@ -29,8 +34,6 @@ defaults:
 jobs:
   # Build job
   build:
-    permissions:
-      contents: read
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.146.0' }}
@@ -42,7 +45,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: exampleSite
+          submodules: recursive
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
